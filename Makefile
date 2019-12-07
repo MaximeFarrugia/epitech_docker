@@ -7,7 +7,7 @@ build:
 	docker build -t $(NAME) .
 
 run:
-	docker run -v ${CURDIR}/../:/workspace --privileged -it --rm $(NAME) --name $(NAME) $(COMMAND)
+	docker run -v ${CURDIR}/../:/workspace --privileged --name $(NAME) -it --rm $(NAME) $(COMMAND)
 
 save:
-	docker commit $(NAME)
+	docker commit $(NAME) $(NAME)
