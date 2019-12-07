@@ -10,7 +10,7 @@ COPY ./build_sources/id_rsa.pub /root/.ssh/id_rsa.pub
 COPY ./build_sources/id_rsa /root/.ssh/id_rsa
 
 RUN dnf update -y
-RUN dnf install bzip2 emacs vim
+RUN dnf install -y bzip2 emacs vim
 RUN wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 
 ENV LOGIN firstname.lastname@epitech.eu
